@@ -53,4 +53,16 @@ def Reverse(Pattern):
         reverse_string += char
     return reverse_string
  
-    
+ def Complement(Pattern):
+    complement_string = ''
+    for i in Pattern:
+        if i == 'A':
+            complement_string += 'T'
+        elif i == 'T':
+            complement_string += 'A'
+        elif i == 'C':
+            complement_string += 'G'
+        else :
+            complement_string += 'C'
+    return complement_string
+    # your code here
