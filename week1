@@ -42,8 +42,13 @@ def FrequentWords(Text, k):
     return words
 
 
-# Input:  A string Pattern
-# Output: The reverse of Pattern
+# Input:  A DNA string Pattern
+# Output: The reverse complement of Pattern
+def ReverseComplement(Pattern):
+    Pattern = Reverse(Pattern) # reverse all letters in a string
+    Pattern = Complement(Pattern) # complement each letter in a string
+    return Pattern
+
 def Reverse(Pattern):
     reverse = []
     reverse_string = ''
@@ -52,19 +57,6 @@ def Reverse(Pattern):
     for char in reverse:
         reverse_string += char
     return reverse_string
- 
- def Complement(Pattern):
-    complement_string = ''
-    for i in Pattern:
-        if i == 'A':
-            complement_string += 'T'
-        elif i == 'T':
-            complement_string += 'A'
-        elif i == 'C':
-            complement_string += 'G'
-        else :
-            complement_string += 'C'
-    return complement_string
 
 def Complement(Pattern):
     d = {}
@@ -76,4 +68,4 @@ def Complement(Pattern):
     complement_string = ''
     for i in Pattern:
         complement_string += d[i]
-    return complement_string
+    return(complement_string)
