@@ -40,3 +40,17 @@ def FrequentWords(Text, k):
 
         # add each key to words whose corresponding frequency value is equal to m
     return words
+
+
+# Input:  A string Pattern
+# Output: The reverse of Pattern
+def Reverse(Pattern):
+    reverse = []
+    reverse_string = ''
+    for char in Pattern:
+        reverse.insert(0,char)
+    for char in reverse:
+        reverse_string += char
+    return reverse_string
+ 
+    
