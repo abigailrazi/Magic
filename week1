@@ -65,4 +65,15 @@ def Reverse(Pattern):
         else :
             complement_string += 'C'
     return complement_string
-    # your code here
+
+def Complement(Pattern):
+    d = {}
+    d['A']='T'
+    d['T']='A'
+    d['C']='G'
+    d['G']='C'
+    
+    complement_string = ''
+    for i in Pattern:
+        complement_string += d[i]
+    return complement_string
