@@ -5,6 +5,7 @@ def PatternCount(Pattern, Text):
         if Text[i:i+len(Pattern)] == Pattern:
             count = count+1
     return count 
+
 def FrequencyMap(Text, k):
     n = len(Text)
     freq = {}
@@ -16,8 +17,6 @@ def FrequencyMap(Text, k):
             freq[Pattern]= freq[Pattern]+1
     return freq
     
-
-
 def FrequencyMap(Text, k):
     # your code here
     n = len(Text)
@@ -69,3 +68,15 @@ def Complement(Pattern):
     for i in Pattern:
         complement_string += d[i]
     return(complement_string)
+
+
+
+#Pattern Matching Problem:  Find all occurrences of a pattern in a string. 
+#Input: Strings Pattern and Genome.
+#Output: All starting positions in Genome where Pattern appears as a substring
+def PatternMatching(Pattern, Genome):
+    positions = [] # output variable
+    for i in range(len(Genome)-len(Pattern)+1):
+        if Genome[i:i+len(Pattern)] == Pattern:
+            positions.append(i)
+    return positions 
